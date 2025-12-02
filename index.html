@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Avinash Lokhande | Data Science Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: #0f172a;
+      color: #e5e7eb;
+      line-height: 1.6;
+    }
+
+    a { color: #38bdf8; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    header {
+      padding: 20px 8%;
+      background: rgba(15, 23, 42, 0.95);
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      border-bottom: 1px solid #1f2937;
+    }
+
+    header .logo {
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 18px;
+      font-size: 0.95rem;
+    }
+
+    section {
+      padding: 60px 8%;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
+      gap: 40px;
+      align-items: center;
+    }
+
+    .hero-title {
+      font-size: 2.4rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+
+    .hero-subtitle {
+      color: #9ca3af;
+      margin-bottom: 20px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 4px 10px;
+      margin: 4px 4px 4px 0;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      border: 1px solid #374151;
+      color: #d1d5db;
+    }
+
+    .hero-card {
+      background: #020617;
+      border-radius: 16px;
+      padding: 20px;
+      border: 1px solid #1f2937;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      margin-bottom: 16px;
+    }
+
+    .section-text {
+      color: #d1d5db;
+      margin-bottom: 14px;
+      font-size: 0.98rem;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    @media (min-width: 768px) {
+      .grid-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .grid-3 {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+    }
+
+    .card {
+      background: #020617;
+      border-radius: 14px;
+      padding: 16px 18px;
+      border: 1px solid #1f2937;
+      transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-3px);
+      border-color: #38bdf8;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+
+    .card-meta {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+
+    .card-text {
+      font-size: 0.9rem;
+      color: #d1d5db;
+      margin-bottom: 8px;
+    }
+
+    .pill {
+      display: inline-block;
+      font-size: 0.78rem;
+      padding: 2px 8px;
+      border-radius: 999px;
+      background: #0b1120;
+      border: 1px solid #1f2937;
+      margin: 1px 4px 4px 0;
+      color: #e5e7eb;
+    }
+
+    .contact {
+      text-align: center;
+      padding-bottom: 80px;
+    }
+
+    .contact-btn {
+      display: inline-block;
+      padding: 10px 22px;
+      border-radius: 999px;
+      border: none;
+      background: #38bdf8;
+      color: #020617;
+      font-weight: 600;
+      cursor: pointer;
+      margin: 8px;
+    }
+
+    .contact-btn.secondary {
+      background: transparent;
+      color: #e5e7eb;
+      border: 1px solid #4b5563;
+    }
+
+    footer {
+      text-align: center;
+      padding: 18px;
+      font-size: 0.8rem;
+      color: #6b7280;
+      border-top: 1px solid #1f2937;
+      background: #020617;
+    }
+
+    .small-muted {
+      font-size: 0.8rem;
+      color: #9ca3af;
+      margin-top: 6px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">Avinash Lokhande</div>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div>
+      <p class="small-muted">Pune, Maharashtra · Data Science & Machine Learning</p>
+      <h1 class="hero-title">I build data-driven solutions with ML & analytics.</h1>
+      <p class="hero-subtitle">
+        Data Science graduate with hands-on experience in machine learning, predictive modelling,
+        EDA and deployment using Python, SQL and modern ML libraries.
+      </p>
+      <div>
+        <span class="tag">Python</span>
+        <span class="tag">SQL</span>
+        <span class="tag">Machine Learning</span>
+        <span class="tag">EDA</span>
+        <span class="tag">Scikit-learn</span>
+        <span class="tag">TensorFlow</span>
+        <span class="tag">Power BI</span>
+      </div>
+    </div>
+
+    <div class="hero-card">
+      <h2>Quick Info</h2>
+      <p class="section-text">
+        B.Tech in <strong>Artificial Intelligence & Data Science</strong> with internship experience
+        building ML models, doing feature engineering and deploying models with Flask & Git.
+      </p>
+      <p class="section-text">
+        I enjoy turning messy, real-world data into clean insights and models that can be used
+        by products and business teams.
+      </p>
+      <p class="small-muted">
+        Open to roles: Data Analyst · Data Scientist · ML Engineer
+      </p>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>About</h2>
+    <p class="section-text">
+      I'm Avinash (Avi) Lokhande, a data science enthusiast focused on building end-to-end machine
+      learning pipelines – from data cleaning and EDA to model training, evaluation and deployment.
+      I have worked with Logistic Regression, Random Forest, XGBoost and deep learning tools,
+      and I like building practical projects that reflect real use-cases.
+    </p>
+    <p class="section-text">
+      Recently, as a Data Science Intern at Seven Mentor Pvt. Ltd., I:
+    </p>
+    <ul class="section-text" style="margin-left: 18px;">
+      <li>Developed ML models for different datasets using Python and scikit-learn</li>
+      <li>Performed EDA, feature engineering and visual analysis using Pandas, Matplotlib & Seaborn</li>
+      <li>Helped create ML pipelines and basic deployments using Flask and GitHub</li>
+    </ul>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid grid-3" style="margin-top: 18px;">
+      <div class="card">
+        <div class="card-title">Programming & Querying</div>
+        <p class="card-text">Python, SQL, DAX</p>
+        <span class="pill">Pandas</span>
+        <span class="pill">NumPy</span>
+        <span class="pill">Jupyter</span>
+      </div>
+      <div class="card">
+        <div class="card-title">ML & Deep Learning</div>
+        <p class="card-text">Scikit-learn, TensorFlow, classification, regression, clustering.</p>
+        <span class="pill">Model Evaluation</span>
+        <span class="pill">Feature Engineering</span>
+        <span class="pill">AutoML (EvalML)</span>
+      </div>
+      <div class="card">
+        <div class="card-title">Data & Visualization</div>
+        <p class="card-text">Exploratory Data Analysis and dashboard-style reporting.</p>
+        <span class="pill">Matplotlib</span>
+        <span class="pill">Seaborn</span>
+        <span class="pill">Excel</span>
+        <span class="pill">Power BI</span>
+      </div>
+      <div class="card">
+        <div class="card-title">Databases & Tools</div>
+        <p class="card-text">MySQL, Git, GitHub, VS Code.</p>
+        <span class="pill">Git Workflow</span>
+        <span class="pill">Flask (basic deployment)</span>
+      </div>
+      <div class="card">
+        <div class="card-title">Soft Skills</div>
+        <p class="card-text">Problem solving, continuous learning, working with teams.</p>
+        <span class="pill">Communication</span>
+        <span class="pill">Teamwork</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>Projects</h2>
+    <p class="section-text">Some of the work I’ve done with real-world style datasets.</p>
+
+    <div class="grid grid-2" style="margin-top: 18px;">
+      <div class="card">
+        <div class="card-title">Student Exam Performance Indicator</div>
+        <p class="card-meta">Regression · Python · Scikit-learn</p>
+        <p class="card-text">
+          End-to-end ML project to predict student exam scores. Includes data preprocessing,
+          feature engineering, model comparison (Linear Regression, Random Forest, XGBoost)
+          and interpretation of feature effects.
+        </p>
+        <!-- Replace # with actual GitHub link -->
+        <a href="#" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Heart Attack Risk Predictor (AutoML with EvalML)</div>
+        <p class="card-meta">Classification · AutoML · Model Explainability</p>
+        <p class="card-text">
+          Built an AutoML pipeline using EvalML to predict cardiac risk. Automated model
+          selection and feature engineering and analysed metrics (AUC, F1) and feature importance.
+        </p>
+        <a href="#" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-title">College Placement Prediction System</div>
+        <p class="card-meta">Classification · Logistic Regression · Flask</p>
+        <p class="card-text">
+          Logistic Regression-based system to predict whether a student gets placed.
+          Complete pipeline from preprocessing to evaluation and a simple Flask web
+          app for real-time predictions.
+        </p>
+        <a href="#" target="_blank">View on GitHub →</a>
+      </div>
+
+      <div class="card">
+        <div class="card-title">Ride Booking Dataset Analysis</div>
+        <p class="card-meta">EDA · Visualization · Business Insight</p>
+        <p class="card-text">
+          Exploratory data analysis of ride booking behaviour to identify demand peaks,
+          popular routes and pricing impacts. Produced cleaned datasets and insight-focused visuals.
+        </p>
+        <a href="#" target="_blank">View on GitHub →</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact</h2>
+    <p class="section-text" style="text-align:center;">
+      I’m open to internships and full-time roles in Data Science, Machine Learning and Analytics.
+      Feel free to reach out.
+    </p>
+    <div>
+      <a class="contact-btn" href="mailto:avilokhande50@gmail.com">Email Me</a>
+      <a class="contact-btn secondary" href="https://www.linkedin.com/in/avinash-lokhande-a6b73b262" target="_blank">LinkedIn</a>
+      <a class="contact-btn secondary" href="https://github.com/Avi0302" target="_blank">GitHub</a>
+    </div>
+  </section>
+
+  <footer>
+    © <span id="year"></span> Avinash Lokhande · Built with HTML & CSS
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
