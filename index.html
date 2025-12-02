@@ -13,85 +13,220 @@
     }
 
     body {
-      background: #0f172a;
+      background: #020617;
       color: #e5e7eb;
       line-height: 1.6;
+      transition: background 0.25s ease, color 0.25s ease;
+    }
+
+    /* LIGHT THEME */
+    body.light {
+      background: #f3f4f6;
+      color: #111827;
+    }
+
+    body.light header {
+      background: #ffffffee;
+      border-bottom: 1px solid #e5e7eb;
+    }
+
+    body.light .hero-card,
+    body.light .card {
+      background: #ffffff;
+      border-color: #e5e7eb;
+    }
+
+    body.light footer {
+      background: #111827;
+      color: #e5e7eb;
     }
 
     a { color: #38bdf8; text-decoration: none; }
     a:hover { text-decoration: underline; }
 
+    /* ---------- HEADER ---------- */
     header {
-      padding: 20px 8%;
-      background: rgba(15, 23, 42, 0.95);
+      padding: 16px 10%;
+      background: rgba(2, 6, 23, 0.96);
       position: sticky;
       top: 0;
       z-index: 10;
-      border-bottom: 1px solid #1f2937;
+      border-bottom: 1px solid #0b1120;
+      backdrop-filter: blur(10px);
     }
 
     header .logo {
       font-weight: 700;
-      letter-spacing: 1px;
+      letter-spacing: 0.06em;
+      font-size: 1.1rem;
     }
 
     nav {
       display: flex;
       align-items: center;
       justify-content: space-between;
+      gap: 16px;
     }
 
     nav ul {
       list-style: none;
       display: flex;
-      gap: 18px;
+      gap: 22px;
       font-size: 0.95rem;
     }
 
+    nav ul a {
+      padding-bottom: 2px;
+    }
+
+    nav ul a:hover {
+      border-bottom: 1px solid #38bdf8;
+      text-decoration: none;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .small-btn {
+      padding: 6px 14px;
+      border-radius: 999px;
+      border: 1px solid #4b5563;
+      background: transparent;
+      color: inherit;
+      font-size: 0.8rem;
+      cursor: pointer;
+      white-space: nowrap;
+    }
+
+    .small-btn.resume-btn {
+      background: #38bdf8;
+      color: #020617;
+      border-color: #38bdf8;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* ---------- SECTIONS ---------- */
     section {
-      padding: 60px 8%;
-      max-width: 1100px;
+      padding: 60px 10%;
+      max-width: 1200px;
       margin: 0 auto;
     }
 
+    /* ---------- HERO ---------- */
     .hero {
       display: grid;
-      grid-template-columns: minmax(0, 2fr) minmax(0, 1.3fr);
-      gap: 40px;
+      grid-template-columns: minmax(0, 2.2fr) minmax(0, 1.3fr);
+      gap: 50px;
       align-items: center;
+      padding-top: 40px;
     }
 
     .hero-title {
-      font-size: 2.4rem;
-      font-weight: 700;
-      margin-bottom: 10px;
+      font-size: 2.8rem;
+      font-weight: 750;
+      margin-bottom: 18px;
     }
 
     .hero-subtitle {
       color: #9ca3af;
-      margin-bottom: 20px;
+      margin-bottom: 22px;
+      font-size: 1.02rem;
+      max-width: 34rem;
+    }
+
+    body.light .hero-subtitle {
+      color: #6b7280;
+    }
+
+    .small-muted {
+      font-size: 0.85rem;
+      color: #9ca3af;
+      margin-bottom: 8px;
+    }
+
+    body.light .small-muted {
+      color: #6b7280;
     }
 
     .tag {
       display: inline-block;
-      padding: 4px 10px;
-      margin: 4px 4px 4px 0;
+      padding: 5px 12px;
+      margin: 4px 6px 4px 0;
       border-radius: 999px;
       font-size: 0.8rem;
-      border: 1px solid #374151;
-      color: #d1d5db;
+      border: 1px solid #1f2937;
+      color: #e5e7eb;
+      background: #020617;
+    }
+
+    body.light .tag {
+      color: #111827;
+      border-color: #d1d5db;
+      background: #e5e7eb;
+    }
+
+    /* HERO RIGHT SIDE */
+    .hero-side {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .profile-photo {
+      width: 165px;
+      height: 165px;
+      border-radius: 999px;
+      object-fit: cover;
+      border: 3px solid #38bdf8;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.55);
+      background: #020617;
+    }
+
+    .hero-name-block {
+      text-align: center;
+      line-height: 1.4;
+    }
+
+    .hero-name {
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .hero-role {
+      font-size: 0.9rem;
+      color: #9ca3af;
+    }
+
+    .hero-location {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    body.light .hero-role {
+      color: #4b5563;
+    }
+
+    body.light .hero-location {
+      color: #9ca3af;
     }
 
     .hero-card {
       background: #020617;
-      border-radius: 16px;
-      padding: 20px;
-      border: 1px solid #1f2937;
-      box-shadow: 0 18px 40px rgba(0,0,0,0.35);
+      border-radius: 18px;
+      padding: 20px 22px;
+      border: 1px solid #111827;
+      box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+      width: 100%;
     }
 
     h2 {
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       margin-bottom: 16px;
     }
 
@@ -99,6 +234,10 @@
       color: #d1d5db;
       margin-bottom: 14px;
       font-size: 0.98rem;
+    }
+
+    body.light .section-text {
+      color: #111827;
     }
 
     .grid {
@@ -115,23 +254,38 @@
       }
     }
 
+    @media (max-width: 900px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .hero-side {
+        order: -1;
+      }
+    }
+
+    /* ---------- CARDS ---------- */
     .card {
       background: #020617;
       border-radius: 14px;
-      padding: 16px 18px;
-      border: 1px solid #1f2937;
-      transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+      padding: 18px;
+      border: 1px solid #111827;
+      transition: 0.18s ease;
     }
 
     .card:hover {
       transform: translateY(-3px);
       border-color: #38bdf8;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+      box-shadow: 0 12px 28px rgba(0,0,0,0.45);
     }
 
     .card-title {
       font-weight: 600;
       margin-bottom: 6px;
+      font-size: 1.05rem;
     }
 
     .card-meta {
@@ -141,7 +295,7 @@
     }
 
     .card-text {
-      font-size: 0.9rem;
+      font-size: 0.92rem;
       color: #d1d5db;
       margin-bottom: 8px;
     }
@@ -151,15 +305,16 @@
       font-size: 0.78rem;
       padding: 2px 8px;
       border-radius: 999px;
-      background: #0b1120;
+      background: #020617;
       border: 1px solid #1f2937;
       margin: 1px 4px 4px 0;
       color: #e5e7eb;
     }
 
+    /* ---------- CONTACT & FOOTER ---------- */
     .contact {
       text-align: center;
-      padding-bottom: 80px;
+      padding-bottom: 70px;
     }
 
     .contact-btn {
@@ -180,35 +335,45 @@
       border: 1px solid #4b5563;
     }
 
+    body.light .contact-btn.secondary {
+      color: #111827;
+      border-color: #9ca3af;
+    }
+
     footer {
       text-align: center;
       padding: 18px;
       font-size: 0.8rem;
       color: #6b7280;
-      border-top: 1px solid #1f2937;
+      border-top: 1px solid #020617;
       background: #020617;
-    }
-
-    .small-muted {
-      font-size: 0.8rem;
-      color: #9ca3af;
-      margin-top: 6px;
     }
   </style>
 </head>
+
 <body>
+  <!-- HEADER -->
   <header>
     <nav>
       <div class="logo">Avinash Lokhande</div>
+
       <ul>
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="small-btn">Light mode</button>
+        <a href="Avinash_Lokhande_Resume.pdf" download class="small-btn resume-btn">
+          Download Resume
+        </a>
+      </div>
     </nav>
   </header>
 
+  <!-- HERO -->
   <section class="hero">
     <div>
       <p class="small-muted">Pune, Maharashtra · Data Science & Machine Learning</p>
@@ -221,6 +386,7 @@
         <span class="tag">Python</span>
         <span class="tag">SQL</span>
         <span class="tag">Machine Learning</span>
+        <span class="tag">Deep Learning</span>
         <span class="tag">EDA</span>
         <span class="tag">Scikit-learn</span>
         <span class="tag">TensorFlow</span>
@@ -228,40 +394,53 @@
       </div>
     </div>
 
-    <div class="hero-card">
-      <h2>Quick Info</h2>
-      <p class="section-text">
-        B.Tech in <strong>Artificial Intelligence & Data Science</strong> with internship experience
-        building ML models, doing feature engineering and deploying models with Flask & Git.
-      </p>
-      <p class="section-text">
-        I enjoy turning messy, real-world data into clean insights and models that can be used
-        by products and business teams.
-      </p>
-      <p class="small-muted">
-        Open to roles: Data Analyst · Data Scientist · ML Engineer
-      </p>
+    <div class="hero-side">
+      <!-- PROFILE IMAGE -->
+      <img src="profile.jpg" alt="" class="profile-photo" />
+
+      <!-- NAME / ROLE / LOCATION -->
+      <div class="hero-name-block">
+        <div class="hero-name">Avinash Lokhande</div>
+        <div class="hero-role">Data Science · Machine Learning</div>
+        <div class="hero-location">Pune, Maharashtra, India</div>
+      </div>
+
+      <!-- QUICK INFO CARD -->
+      <div class="hero-card">
+        <h2>Quick Info</h2>
+        <p class="section-text">
+          B.Tech in <strong>Artificial Intelligence & Data Science</strong> with internship experience
+          building ML models, doing feature engineering and deploying models with Flask & Git.
+        </p>
+        <p class="section-text">
+          I enjoy turning messy, real-world data into clean insights and predictive models
+          that help teams make better decisions.
+        </p>
+        <p class="small-muted">
+          Open to roles: Data Analyst · Data Scientist · ML Engineer
+        </p>
+      </div>
     </div>
   </section>
 
+  <!-- ABOUT -->
   <section id="about">
     <h2>About</h2>
     <p class="section-text">
-      I'm Avinash (Avi) Lokhande, a data science enthusiast focused on building end-to-end machine
+      I'm Avinash Lokhande, a data science enthusiast focused on building end-to-end machine
       learning pipelines – from data cleaning and EDA to model training, evaluation and deployment.
-      I have worked with Logistic Regression, Random Forest, XGBoost and deep learning tools,
-      and I like building practical projects that reflect real use-cases.
     </p>
     <p class="section-text">
-      Recently, as a Data Science Intern at Seven Mentor Pvt. Ltd., I:
+      During my Data Science Internship at Seven Mentor Pvt. Ltd., I:
     </p>
     <ul class="section-text" style="margin-left: 18px;">
-      <li>Developed ML models for different datasets using Python and scikit-learn</li>
-      <li>Performed EDA, feature engineering and visual analysis using Pandas, Matplotlib & Seaborn</li>
-      <li>Helped create ML pipelines and basic deployments using Flask and GitHub</li>
+      <li>Developed ML models for multiple datasets using Python and scikit-learn</li>
+      <li>Performed EDA, feature engineering and visual reporting</li>
+      <li>Worked with Flask, Git and GitHub for basic ML deployment workflows</li>
     </ul>
   </section>
 
+  <!-- SKILLS -->
   <section id="skills">
     <h2>Skills</h2>
     <div class="grid grid-3" style="margin-top: 18px;">
@@ -272,91 +451,82 @@
         <span class="pill">NumPy</span>
         <span class="pill">Jupyter</span>
       </div>
+
       <div class="card">
         <div class="card-title">ML & Deep Learning</div>
-        <p class="card-text">Scikit-learn, TensorFlow, classification, regression, clustering.</p>
-        <span class="pill">Model Evaluation</span>
+        <p class="card-text">Scikit-learn, TensorFlow, classification, regression.</p>
         <span class="pill">Feature Engineering</span>
-        <span class="pill">AutoML (EvalML)</span>
+        <span class="pill">Model Evaluation</span>
       </div>
+
       <div class="card">
-        <div class="card-title">Data & Visualization</div>
-        <p class="card-text">Exploratory Data Analysis and dashboard-style reporting.</p>
+        <div class="card-title">Visualization</div>
+        <p class="card-text">EDA & insights for decision-making.</p>
         <span class="pill">Matplotlib</span>
         <span class="pill">Seaborn</span>
-        <span class="pill">Excel</span>
         <span class="pill">Power BI</span>
       </div>
+
       <div class="card">
-        <div class="card-title">Databases & Tools</div>
-        <p class="card-text">MySQL, Git, GitHub, VS Code.</p>
+        <div class="card-title">Tools & Databases</div>
+        <p class="card-text">Git, GitHub, Flask, MySQL, VS Code.</p>
         <span class="pill">Git Workflow</span>
-        <span class="pill">Flask (basic deployment)</span>
-      </div>
-      <div class="card">
-        <div class="card-title">Soft Skills</div>
-        <p class="card-text">Problem solving, continuous learning, working with teams.</p>
-        <span class="pill">Communication</span>
-        <span class="pill">Teamwork</span>
       </div>
     </div>
   </section>
 
+  <!-- PROJECTS -->
   <section id="projects">
     <h2>Projects</h2>
-    <p class="section-text">Some of the work I’ve done with real-world style datasets.</p>
+    <p class="section-text">Selected projects with real-world style datasets.</p>
 
     <div class="grid grid-2" style="margin-top: 18px;">
       <div class="card">
         <div class="card-title">Student Exam Performance Indicator</div>
         <p class="card-meta">Regression · Python · Scikit-learn</p>
         <p class="card-text">
-          End-to-end ML project to predict student exam scores. Includes data preprocessing,
-          feature engineering, model comparison (Linear Regression, Random Forest, XGBoost)
-          and interpretation of feature effects.
+          End-to-end ML project to predict student exam scores with preprocessing, feature engineering
+          and model comparison (Linear Regression, Random Forest, XGBoost).
         </p>
-        <!-- Replace # with actual GitHub link -->
-        <a href="#" target="_blank">View on GitHub →</a>
+        <a href="https://github.com/Avi0302/Student-Exam-Performance-Indicator" target="_blank">View on GitHub →</a>
       </div>
 
       <div class="card">
-        <div class="card-title">Heart Attack Risk Predictor (AutoML with EvalML)</div>
-        <p class="card-meta">Classification · AutoML · Model Explainability</p>
+        <div class="card-title">Heart Attack Risk Predictor</div>
+        <p class="card-meta">AutoML · EvalML · Classification</p>
         <p class="card-text">
-          Built an AutoML pipeline using EvalML to predict cardiac risk. Automated model
-          selection and feature engineering and analysed metrics (AUC, F1) and feature importance.
+          AutoML pipeline using EvalML for cardiac risk prediction with feature importance and metrics
+          like AUC and F1.
         </p>
-        <a href="#" target="_blank">View on GitHub →</a>
+        <a href="https://github.com/Avi0302/Heart_Attack_Risk_Predictor_with-Eval-ML" target="_blank">View on GitHub →</a>
       </div>
 
       <div class="card">
-        <div class="card-title">College Placement Prediction System</div>
-        <p class="card-meta">Classification · Logistic Regression · Flask</p>
+        <div class="card-title">College Placement Prediction</div>
+        <p class="card-meta">Logistic Regression · Flask</p>
         <p class="card-text">
-          Logistic Regression-based system to predict whether a student gets placed.
-          Complete pipeline from preprocessing to evaluation and a simple Flask web
-          app for real-time predictions.
+          Placement prediction model with a simple Flask interface for real-time inference.
         </p>
-        <a href="#" target="_blank">View on GitHub →</a>
+        <a href="https://github.com/Avi0302/college-placement-prediction" target="_blank">View on GitHub →</a>
       </div>
 
       <div class="card">
         <div class="card-title">Ride Booking Dataset Analysis</div>
-        <p class="card-meta">EDA · Visualization · Business Insight</p>
+        <p class="card-meta">EDA · Visualization</p>
         <p class="card-text">
-          Exploratory data analysis of ride booking behaviour to identify demand peaks,
-          popular routes and pricing impacts. Produced cleaned datasets and insight-focused visuals.
+          Exploratory analysis of ride booking behaviour to uncover demand patterns, popular routes
+          and pricing impact.
         </p>
-        <a href="#" target="_blank">View on GitHub →</a>
+        <a href="https://github.com/Avi0302/Analysis-of-Ride-Booking-Dataset" target="_blank">View on GitHub →</a>
       </div>
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" class="contact">
     <h2>Contact</h2>
     <p class="section-text" style="text-align:center;">
       I’m open to internships and full-time roles in Data Science, Machine Learning and Analytics.
-      Feel free to reach out.
     </p>
     <div>
       <a class="contact-btn" href="mailto:avilokhande50@gmail.com">Email Me</a>
@@ -370,7 +540,15 @@
   </footer>
 
   <script>
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Theme toggle
+    const toggleBtn = document.getElementById("themeToggle");
+    toggleBtn.addEventListener("click", () => {
+      const isLight = document.body.classList.toggle("light");
+      toggleBtn.textContent = isLight ? "Dark mode" : "Light mode";
+    });
   </script>
 </body>
 </html>
